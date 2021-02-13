@@ -33,6 +33,8 @@ export default function Listings() {
                     </div>
                 </div>
             </div>
+            <div id="angleDivBeigeContact"></div>
+            <div id="angleDivBlueContact"></div>
         </section>
     )
 }

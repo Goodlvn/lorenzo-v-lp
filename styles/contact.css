@@ -1,10 +1,11 @@
 .contactContainer {
   background-color: #09264a;
   color: white;
-  min-height: 25rem;
+  /* min-height: 25rem; */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .contactWrapper {

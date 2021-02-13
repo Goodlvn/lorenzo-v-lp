@@ -3,9 +3,11 @@
 export default function Main() {
     return (
         <main className="mainContainer">
-            <div id="angleDivBeige"></div>
+            <div id="angleDivBeige">
+                <img id="logoHeader" src="/images/lv-logo.png" alt="lorenzo-v logo" />
+            </div>
 
-            <img id="logoHeader" src="/images/lv-logo.png" alt="lorenzo-v logo" />
+
 
             <div className="infoContainer">
                 <img id="lorenzo" src="/images/placeholder.png" alt="Lorenzo Vasquez" />

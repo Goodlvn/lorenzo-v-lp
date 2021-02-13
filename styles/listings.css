@@ -75,22 +75,23 @@ p {
 #angleDivBeigeContact {
   background-color: #ecf2e9;
   width: 100%;
-  height: 20rem;
+  height: 50rem;
   margin: 0 auto;
-  transform: skew(-70deg, 9deg) rotate(-1deg);
+  -webkit-clip-path: polygon(40% 0, 100% 35%, 100% 100%, 0 100%, 0 38%);
+  clip-path: polygon(16% 14%, 100% 44%, 100% 100%, 0% 100%, 0 25%);
   position: absolute;
-  bottom: -16rem;
+  bottom: -31rem;
   z-index: -1;
-  left: -14rem;
 }
 
 #angleDivBlueContact {
   background-color: #09264a;
   width: 100%;
-  height: 20rem;
+  height: 50rem;
   margin: 0 auto;
-  transform: skew(-71deg, 9deg) rotate(1deg);
+  -webkit-clip-path: polygon(40% 0, 100% 35%, 100% 100%, 0 100%, 0 38%);
+  clip-path: polygon(33% 5%, 100% 28%, 100% 100%, 0 100%, 0 28%);
   position: absolute;
-  bottom: -17rem;
+  bottom: -36rem;
   z-index: -1;
 }

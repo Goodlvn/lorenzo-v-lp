@@ -6,6 +6,7 @@
   align-items: center;
   position: relative;
   padding-bottom: 5rem;
+  min-height: 402px;
 }
 
 .contactWrapper {
@@ -30,6 +31,10 @@
 }
 
 /* THE CONTACT FORM */
+.formContainer {
+  width: 100%;
+}
+
 .contactForm {
   width: 40%;
   display: flex;
@@ -68,4 +73,21 @@
   padding: 1rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.messageSent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 460.8px;
+}
+
+.messageSent img {
+  width: 13rem;
+}
+
+.messageSent p {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
 }

@@ -12,37 +12,44 @@ export default class MyForm extends React.Component {
     render() {
         const { status } = this.state;
         return (
-            <form
-                className="contactForm"
-                onSubmit={this.submitForm}
-                action="https://formspree.io/f/xgepbega"
-                method="POST"
-            >
+            <>
+                {status === "" ? <form
+                    className="contactForm"
+                    onSubmit={this.submitForm}
+                    action="https://formspree.io/f/xgepbega"
+                    method="POST"
+                >
 
-                <input type="text" name="name" placeholder="NAME" />
+                    <input type="text" name="name" placeholder="NAME" />
 
-                <input type="phone" name="phone" placeholder="PHONE #" />
+                    <input type="phone" name="phone" placeholder="PHONE #" />
 
-                <input type="email" name="email" placeholder="EMAIL" />
+                    <input type="email" name="email" placeholder="EMAIL" />
 
-                <div className="contactTypeBtns">
-                    <div class="typeContainer">
-                        <input type="radio" id="Buyer" name="contact-type" value="buyer"
-                        />
-                        <label for="Buyer">BUYING</label>
+                    <div className="contactTypeBtns">
+                        <div class="typeContainer">
+                            <input type="radio" id="Buyer" name="contact-type" value="buyer"
+                            />
+                            <label for="Buyer">BUYING</label>
+                        </div>
+
+                        <div class="typeContainer">
+                            <input type="radio" id="Seller" name="contact-type" value="seller"
+                            />
+                            <label for="Seller">SELLING</label>
+                        </div>
                     </div>
 
-                    <div class="typeContainer">
-                        <input type="radio" id="Seller" name="contact-type" value="seller"
-                        />
-                        <label for="Seller">SELLING</label>
-                    </div>
-                </div>
+                    {status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn">SUBMIT</button>}
+                    {status === "ERROR" && <p>Ooops! There was an error.</p>}
+                </form>
 
-
-                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn">SUBMIT</button>}
-                {status === "ERROR" && <p>Ooops! There was an error.</p>}
-            </form>
+                    :
+                    <div className="messageSent">
+                        <img src="/images/sent.png" alt="message sent" />
+                        <p>Thanks for reaching out!</p>
+                    </div>}
+            </>
         );
     }
 

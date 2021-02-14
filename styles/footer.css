@@ -1,13 +1,21 @@
 Footer {
   background-color: #ecf2e9;
+  color: #001d37;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+Footer p {
+  margin: 0;
 }
 
 #logoFooter {
   width: 15rem;
   margin-bottom: 1.5rem;
+  padding-top: 1rem;
 }

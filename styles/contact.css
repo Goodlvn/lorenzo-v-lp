@@ -16,6 +16,20 @@
   width: 80%;
 }
 
+/* THE CONTACT TAGLINE */
+.contactText h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+.contactText p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* THE CONTACT FORM */
 .contactForm {
   width: 40%;
   display: flex;

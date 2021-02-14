@@ -10,6 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <link rel="shortcut icon" type="image/jpg" href="/images/logo-favicon.png" />
                     <title>Lorenzo Vasquez</title>
                     <link rel="stylesheet" href="https://use.typekit.net/iob1zex.css" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />

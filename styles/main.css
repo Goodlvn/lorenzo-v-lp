@@ -74,6 +74,7 @@
 .infoMain > p:nth-child(2) {
   font-size: 0.7rem;
   font-weight: 300;
+  margin: 0;
   margin-bottom: 1rem;
 }
 

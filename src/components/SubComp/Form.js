@@ -26,17 +26,21 @@ export default class MyForm extends React.Component {
                 <input type="email" name="email" placeholder="EMAIL" />
 
                 <div className="contactTypeBtns">
-                    <input type="radio" id="Buyer" name="contact-type" value="buyer"
-                    />
-                    <label for="Buyer">BUYING</label>
+                    <div class="typeContainer">
+                        <input type="radio" id="Buyer" name="contact-type" value="buyer"
+                        />
+                        <label for="Buyer">BUYING</label>
+                    </div>
 
-                    <input type="radio" id="Seller" name="contact-type" value="seller"
-                    />
-                    <label for="Seller">SELLING</label>
+                    <div class="typeContainer">
+                        <input type="radio" id="Seller" name="contact-type" value="seller"
+                        />
+                        <label for="Seller">SELLING</label>
+                    </div>
                 </div>
 
 
-                {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn">SUBMIT</button>}
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
             </form>
         );

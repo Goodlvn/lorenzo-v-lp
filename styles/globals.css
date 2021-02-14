@@ -13,3 +13,47 @@ a {
 * {
   box-sizing: border-box;
 }
+
+*::-webkit-input-placeholder {
+  color: #001d37;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: #001d37;
+  opacity: 1;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: #001d37;
+  opacity: 1;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #001d37;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #001d37;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+*::placeholder {
+  /* modern browser */
+  color: #001d37;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}

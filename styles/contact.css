@@ -103,6 +103,7 @@ input[type="radio"] {
 @media only screen and (max-width: 1060px) {
   .contactWrapper {
     flex-direction: column;
+    width: fit-content;
   }
 
   .contactText {
@@ -110,6 +111,6 @@ input[type="radio"] {
   }
 
   .contactForm {
-    width: 45%;
+    width: 100%;
   }
 }

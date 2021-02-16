@@ -10,7 +10,6 @@ export default function Main() {
 
 
             <div className="infoContainer">
-                <img id="lorenzo" src="/images/placeholder.png" alt="Lorenzo Vasquez" />
                 <div className="infoMain">
                     <h3>LORENZO VASQUEZ</h3>
                     <p>DRE#   212504941</p>
@@ -22,6 +21,7 @@ export default function Main() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate eros enim, varius tempor lorem vehicula consequat. Mauris lacus ipsum.
                     </p>
                 </div>
+                <img id="lorenzo" src="/images/lv-mainshot.png" alt="Lorenzo Vasquez" />
             </div>
 
             <div id="angleDivWhite"></div>

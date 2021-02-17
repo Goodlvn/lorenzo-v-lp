@@ -1,4 +1,5 @@
 import Form from "../components/SubComp/Form";
+import FormHook from "../components/SubComp/FormHook";
 
 export default function Contact() {
     return (
@@ -8,7 +9,7 @@ export default function Contact() {
                     <h2>LET'S CONNECT!</h2>
                     <p>Complete this form and I'll be in touch with you soon.</p>
                 </div>
-                <Form />
+                <FormHook />
             </div>
         </section>
     )

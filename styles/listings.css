@@ -142,3 +142,33 @@
     bottom: 0;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .propInfo {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .listingsContainer {
+    flex-direction: column;
+  }
+
+  .forSale {
+    padding: 0;
+  }
+
+  .recentlySold {
+    margin-top: 5rem;
+    padding: 0;
+  }
+
+  .propImage {
+    width: 70%;
+  }
+
+  .propInfo {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+}

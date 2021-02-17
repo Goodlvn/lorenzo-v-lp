@@ -128,4 +128,17 @@
     height: 0;
     padding-bottom: 42%;
   }
+
+  .forSale {
+    padding-left: 3rem;
+  }
+
+  .recentlySold {
+    padding-right: 3rem;
+  }
+
+  .propInfo {
+    padding: 0.5rem;
+    bottom: 0;
+  }
 }

@@ -104,10 +104,46 @@
 
 @media only screen and (max-width: 1060px) {
   #logoHeader {
-    left: 15%;
+    left: 20%;
   }
 
   .infoContainer {
     padding: 0;
+  }
+
+  .infoMain {
+    margin: 13rem 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #angleDivBeige {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 73%, 0% 100%, 0 70%);
+  }
+
+  #logoHeader {
+    left: 10%;
+  }
+
+  #lorenzo {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    right: -10%;
+    margin-bottom: -33%;
+  }
+
+  .mainContainer {
+    margin: 0;
+    justify-content: start;
+  }
+
+  .infoContainer {
+    margin: 0;
+  }
+
+  .infoMain {
+    max-width: 38%;
+    margin-left: 5rem;
   }
 }

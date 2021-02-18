@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 export default function FormHook() {
 
@@ -7,57 +7,88 @@ export default function FormHook() {
         name: "",
         phone: "",
         email: "",
-        nameErr: false,
-        emailErr: false,
-        phoneErr: false
     })
 
+    const [errorState, setErrorState] = useState({
+        invalidName: false,
+        invalidEmail: false,
+        invalidNumber: false
+    })
 
-    const { name, phone, email, nameErr, phoneErr, emailErr } = contactState;
+    const { name, phone, email } = contactState;
+    const { invalidName, invalidEmail, invalidNumber } = errorState;
 
     const handleChange = e => {
         const { value, name } = e.target;
+        const regexNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+        const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
         setContactState({ ...contactState, [name]: value });
+
+        if (name === "name") {
+            setErrorState({ ...errorState, invalidName: false });
+        }
+
+        if (name === "phone" && regexNumber.test(value)) {
+
+            setErrorState({ ...errorState, invalidNumber: false });
+        }
+
+        if (name === "email" && regexEmail.test(value)) {
+            setErrorState({ ...errorState, invalidEmail: false });
+        }
     }
 
     const submitForm = (ev) => {
         ev.preventDefault();
         const form = ev.target;
         const data = new FormData(form);
-        const xhr = new XMLHttpRequest()
+        const xhr = new XMLHttpRequest();
 
-        if (name === "" || phone === "" || email === "") {
-            if (name === "") {
-                console.log("you're missing the name field");
-                setContactState({ ...contactState, nameErr: true })
-            }
 
-            if (phone === "") {
-                console.log("you're missing the phone field");
-                setContactState({ ...contactState, phoneErr: true })
-            }
+        if (name === "" && phone === "" && email === "") {
 
-            if (email === "") {
-                console.log("you're missing the email field");
-                setContactState({ ...contactState, emailErr: true })
-            }
+            setErrorState({ invalidName: true, invalidEmail: true, invalidNumber: true });
 
             return
 
+        } else if (name === "" && phone !== "" && email !== "") {
+
+            setErrorState({ invalidName: true, invalidNumber: false, invalidEmail: false });
+            return
+        } else if (name === "" && phone === "" && email !== "") {
+
+            setErrorState({ invalidName: true, invalidNumber: true, invalidEmail: false });
+            return
+        } else if (name !== "" && phone === "" && email !== "") {
+
+            setErrorState({ invalidName: false, invalidNumber: true, invalidEmail: false });
+            return
+        } else if (name !== "" && phone === "" && email === "") {
+
+            setErrorState({ invalidName: false, invalidNumber: true, invalidEmail: true });
+            return
+        } else if (name !== "" && phone !== "" && email === "") {
+
+            setErrorState({ invalidName: false, invalidNumber: false, invalidEmail: true });
+            return
+        } else if (name === "" && phone !== "" && email === "") {
+
+            setErrorState({ invalidName: true, invalidNumber: false, invalidEmail: true });
+            return
         } else {
-            console.log("sent");
-            // xhr.open(form.method, form.action);
-            // xhr.setRequestHeader("Accept", "application/json");
-            // xhr.onreadystatechange = () => {
-            //     if (xhr.readyState !== XMLHttpRequest.DONE) return;
-            //     if (xhr.status === 200) {
-            //         form.reset();
-            //         setContactState({ status: "SUCCESS" });
-            //     } else {
-            //         setContactState({ status: "ERROR" });
-            //     }
-            // };
-            // xhr.send(data);
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    form.reset();
+                    setContactState({ status: "SUCCESS" });
+                } else {
+                    setContactState({ status: "ERROR" });
+                }
+            };
+            xhr.send(data);
         }
     }
 
@@ -69,12 +100,14 @@ export default function FormHook() {
                 action="https://formspree.io/f/xgepbega"
                 method="POST"
             >
+                {invalidName && <span className="errorName">please enter a name</span>}
+                <input type="text" name="name" placeholder="NAME" onChange={handleChange} className={invalidName ? "error" : ""} />
 
-                <input type="text" name="name" placeholder="NAME" onChange={handleChange} className={nameErr ? "error" : ""} />
+                {invalidNumber && <span className="errorNumber">please enter a valid Number</span>}
+                <input id="phone" type="phone" name="phone" placeholder="PHONE #" onChange={handleChange} className={invalidNumber ? "error" : ""} />
 
-                <input id="phone" type="phone" name="phone" placeholder="PHONE #" onChange={handleChange} className={phoneErr ? "error" : ""} />
-
-                <input id="email" type="email" name="email" placeholder="EMAIL" onChange={handleChange} className={emailErr ? "error" : ""} />
+                {invalidEmail && <span className="errorEmail">please enter a valid email</span>}
+                <input id="email" type="email" name="email" placeholder="EMAIL" onChange={handleChange} className={invalidEmail ? "error" : ""} />
 
                 <div className="contactTypeBtns">
                     <div className="typeContainer">
@@ -90,7 +123,7 @@ export default function FormHook() {
                     </div>
                 </div>
 
-                {contactState.status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn">SUBMIT</button>}
+                {contactState.status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn" >SUBMIT</button>}
                 {contactState.status === "ERROR" && <p>Ooops! There was an error.</p>}
             </form>
 

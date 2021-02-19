@@ -147,4 +147,16 @@ input[type="radio"] {
   .contactForm {
     width: 100%;
   }
+
+  .errorEmail {
+    top: 15.3rem;
+  }
+
+  .errorNumber {
+    top: 10.6rem;
+  }
+
+  .errorName {
+    top: 5.99rem;
+  }
 }

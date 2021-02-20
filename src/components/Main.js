@@ -7,19 +7,17 @@ export default function Main() {
                 <CSSTransition
                     in={true}
                     appear={true}
-                    timeout={10000}
+                    timeout={2000}
                     classNames="fade"
                 >
                     <img id="logoHeader" class="fade-in" src="/images/lv-logo.png" alt="lorenzo-v logo" />
                 </CSSTransition>
             </div>
 
-
-
             <CSSTransition
                 in={true}
                 appear={true}
-                timeout={10000}
+                timeout={2000}
                 classNames="fade"
             >
                 <div className="infoContainer">

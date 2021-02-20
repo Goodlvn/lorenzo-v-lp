@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
+
 export default function FormHook({ status, invalidName, invalidEmail, invalidNumber, submitForm, handleChange }) {
 
     return (
         <>
-            {status === "" ? <form
+            <form
                 className="contactForm"
                 onSubmit={submitForm}
                 action="https://formspree.io/f/xgepbega"
@@ -36,12 +37,6 @@ export default function FormHook({ status, invalidName, invalidEmail, invalidNum
                 {status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactSubmitBtn" >SUBMIT</button>}
                 {status === "ERROR" && <p>Ooops! There was an error.</p>}
             </form>
-
-                :
-                <div className="messageSent">
-                    <img src="/images/sent.png" alt="message sent" />
-                    <p>Thanks for reaching out!</p>
-                </div>}
         </>
     )
 }

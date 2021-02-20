@@ -1,6 +1,7 @@
 import Form from "../components/SubComp/Form";
 import FormHook from "../components/SubComp/FormHook";
 import { useState } from "react"
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default function Contact() {
 
@@ -16,6 +17,9 @@ export default function Contact() {
         invalidEmail: false,
         invalidNumber: false
     })
+
+    const [formState, setFormState] = useState(true);
+    const [messageState, setMessageState] = useState(false);
 
     const { name, phone, email, status } = contactState;
     const { invalidName, invalidEmail, invalidNumber } = errorState;
@@ -85,7 +89,7 @@ export default function Contact() {
                 if (xhr.readyState !== XMLHttpRequest.DONE) return;
                 if (xhr.status === 200) {
                     form.reset();
-                    setContactState({ status: "SUCCESS" });
+                    setMessageState(true)
                 } else {
                     setContactState({ status: "ERROR" });
                 }
@@ -96,11 +100,11 @@ export default function Contact() {
 
     return (
         <section className="contactContainer">
-            <div className="contactWrapper">
-                {status === "" && <div className="contactText">
+            {formState && <div className="contactWrapper">
+                <div className="contactText">
                     <h2>LET'S CONNECT!</h2>
                     <p>Complete this form and I'll be in touch with you soon.</p>
-                </div>}
+                </div>
                 <FormHook
                     status={status}
                     invalidName={invalidName}
@@ -109,7 +113,19 @@ export default function Contact() {
                     handleChange={handleChange}
                     submitForm={submitForm}
                 />
-            </div>
+            </div>}
+            <CSSTransition
+                in={messageState}
+                timeout={1000}
+                classNames="alert"
+                unmountOnExit
+                onEnter={() => setFormState(false)}
+            >
+                <div className="messageSent">
+                    <img src="/images/sent.png" alt="message sent" />
+                    <p>Thanks for reaching out!</p>
+                </div>
+            </CSSTransition>
         </section>
     )
 }

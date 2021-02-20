@@ -61,8 +61,24 @@ a {
 .fade-appear {
   opacity: 0;
 }
-
 .fade-appear.fade-appear-active {
   opacity: 1;
   transition: opacity 1.5s ease-in;
+}
+
+.fade-contact {
+  opacity: 1;
+  z-index: 1;
+}
+.fade-contact-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.contact-exit {
+  opacity: 1;
+}
+.fade-contact-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-out;
 }

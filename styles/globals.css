@@ -57,3 +57,12 @@ a {
   letter-spacing: 1px;
   font-size: 0.7rem;
 }
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}

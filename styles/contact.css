@@ -123,6 +123,8 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   min-width: 460.8px;
+  transition: all 1s ease-out;
+  opacity: 0;
 }
 
 .messageSent img {

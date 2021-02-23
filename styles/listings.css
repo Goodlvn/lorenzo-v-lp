@@ -5,11 +5,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0 0 0;
+  margin: 2rem 0 0 0;
   z-index: -100;
   position: relative;
   padding-bottom: 15rem;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .listingType {
@@ -17,6 +18,10 @@
   letter-spacing: 5px;
   font-weight: 500;
   color: #001d37;
+  flex-basis: 100%;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .listings {
@@ -112,6 +117,13 @@
   z-index: -1;
 }
 
+@media only screen and (min-width: 1325px) {
+  .propImage {
+    width: 30rem;
+    height: 15rem;
+  }
+}
+
 @media only screen and (max-width: 1060px) {
   .listingsContainer {
     justify-content: space-evenly;
@@ -119,7 +131,15 @@
   }
 
   .listings {
-    width: 100%;
+    width: 50%;
+  }
+
+  .forSale {
+    padding-left: 2rem;
+  }
+
+  .recentlySold {
+    padding-right: 2rem;
   }
 
   .propImage {
@@ -127,14 +147,6 @@
     width: 80%;
     height: 0;
     padding-bottom: 42%;
-  }
-
-  .forSale {
-    padding-left: 3rem;
-  }
-
-  .recentlySold {
-    padding-right: 3rem;
   }
 
   .propInfo {

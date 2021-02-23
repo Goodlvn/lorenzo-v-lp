@@ -10,7 +10,7 @@ export default function Main() {
                     timeout={2000}
                     classNames="fade"
                 >
-                    <img id="logoHeader" class="fade-in" src="/images/lv-logo.png" alt="lorenzo-v logo" />
+                    <img id="logoHeader" className="fade-in" src="/images/lv-logo.png" alt="lorenzo-v logo" />
                 </CSSTransition>
             </div>
 
@@ -26,8 +26,14 @@ export default function Main() {
                             <h3>LORENZO VASQUEZ</h3>
                             <p>DRE#   212504941</p>
 
-                            <p className="firstBlue">P 559.667.7612</p>
-                            <p className="firstBlue">E lorenzovasquez@gmail.com</p>
+                            <span>PHONE</span>
+                            <div>
+                                <span className="firstBlue">P</span>
+                                <p >559.667.7612</p>
+                            </div>
+                            <span>EMAIL</span>
+                            <span className="firstBlue">E</span>
+                            <p>lorenzovasquez@gmail.com</p>
 
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate eros enim, varius tempor lorem vehicula consequat. Mauris lacus ipsum.

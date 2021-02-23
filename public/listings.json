@@ -1,0 +1,134 @@
+{
+  "listings": [
+    {
+      "addressFull": "2639 N Chinowth Street Visalia, CA 93291",
+      "city": "Visalia",
+      "price": "$649,900",
+      "rooms": "4",
+      "baths": "3",
+      "sqft": "2,734",
+      "imgs": [
+        "../images/properties/prop1-shot1.jpg",
+        "../images/properties/prop1-shot2.jpg",
+        "../images/properties/prop1-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "1163 N Greenwood Street Tulare, CA 93274",
+      "city": "Tulare",
+      "price": "$320,000",
+      "rooms": "3",
+      "baths": "3",
+      "sqft": "1,734",
+      "imgs": [
+        "../images/properties/prop2-shot1.jpg",
+        "../images/properties/prop2-shot2.jpg",
+        "../images/properties/prop2-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "4144 W Ceres Court Visalia, CA 93291",
+      "city": "Visalia",
+      "price": "$299,000",
+      "rooms": "3",
+      "baths": "2",
+      "sqft": "1,262",
+      "imgs": [
+        "../images/properties/prop3-shot1.jpg",
+        "../images/properties/prop3-shot2.jpg",
+        "../images/properties/prop3-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "5503 W Sweet Drive Visalia, CA 93291",
+      "city": "Visalia",
+      "price": "$525,000",
+      "rooms": "3",
+      "baths": "3",
+      "sqft": "2,601",
+      "imgs": [
+        "../images/properties/prop4-shot1.jpg",
+        "../images/properties/prop4-shot2.jpg",
+        "../images/properties/prop4-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "884 E Belleview Avenue Porterville, CA 93257",
+      "city": "Porterville",
+      "price": "$349,900",
+      "rooms": "4",
+      "baths": "3",
+      "sqft": "2,561",
+      "imgs": [
+        "../images/properties/prop5-shot1.jpg",
+        "../images/properties/prop5-shot2.jpg",
+        "../images/properties/prop5-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "3749 W Nicholas Avenue Visalia, CA 93291",
+      "city": "Visalia",
+      "price": "$445,000",
+      "rooms": "4",
+      "baths": "2",
+      "sqft": "2,254",
+      "imgs": [
+        "../images/properties/prop6-shot1.jpg",
+        "../images/properties/prop6-shot2.jpg",
+        "../images/properties/prop6-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "2627 E Princeton Avenue Visalia, CA 93292",
+      "city": "Visalia",
+      "price": "$455,000",
+      "rooms": "3",
+      "baths": "3",
+      "sqft": "3,273",
+      "imgs": [
+        "../images/properties/prop7-shot1.jpg",
+        "../images/properties/prop7-shot2.jpg",
+        "../images/properties/prop7-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "1414 E Castleview Avenue Visalia, CA 93292",
+      "city": "Visalia",
+      "price": "$319,900",
+      "rooms": "4",
+      "baths": "3",
+      "sqft": "1,811",
+      "imgs": [
+        "../images/properties/prop8-shot1.jpg",
+        "../images/properties/prop8-shot2.jpg",
+        "../images/properties/prop8-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "16179 Cattle Drive Springville, CA 93265",
+      "city": "Springville",
+      "price": "$395,000",
+      "rooms": "4",
+      "baths": "3",
+      "sqft": "2,354",
+      "imgs": [
+        "../images/properties/prop9-shot1.jpg",
+        "../images/properties/prop9-shot2.jpg",
+        "../images/properties/prop9-shot3.jpg"
+      ]
+    },
+    {
+      "addressFull": "3023 W Green Oaks Drive Visalia, CA 93277",
+      "city": "Visalia",
+      "price": "$480,000",
+      "rooms": "4",
+      "baths": "3",
+      "sqft": "2,531",
+      "imgs": [
+        "../images/properties/prop9-shot1.jpg",
+        "../images/properties/prop9-shot2.jpg",
+        "../images/properties/prop9-shot3.jpg"
+      ]
+    }
+  ]
+}

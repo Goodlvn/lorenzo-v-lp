@@ -41,6 +41,7 @@
   margin: 3rem;
   position: relative;
   box-shadow: 0px 0px 10px rgba(18, 18, 27, 0.3);
+  transition: background 1s ease;
 }
 
 .propInfo {
@@ -48,7 +49,7 @@
   padding: 1rem;
   width: 75%;
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   right: 0;
 }
 
@@ -63,34 +64,6 @@
   font-weight: 200;
   font-size: 0.9rem;
   margin: 0;
-}
-
-#prop1 {
-  background: url("/images/prop1.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#prop2 {
-  background: url("/images/prop2.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#prop3 {
-  background: url("/images/prop3.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#prop4 {
-  background: url("/images/prop4.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #angleDivBeigeContact {

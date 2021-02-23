@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
+import Prop1 from "./SubComp/Prop1"
 
 export default function Listings() {
 
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
+
+    // const [prop1, setProp1] = useState(null);
+
+    // data && setProp1(data[0].imgs[0]);
+    let prop1 = data && data[0].imgs[0];
+    let prop2 = data ? data[1].imgs[0] : "";
+    let prop3 = data ? data[2].imgs[0] : "";
+    let prop4 = data ? data[3].imgs[0] : "";
 
     const getData = () => {
         fetch("listings.json", {
@@ -29,43 +38,70 @@ export default function Listings() {
 
     useEffect(() => {
         getData();
+
+
     }, [])
 
-    console.log(data);
+    data && console.log(data);
+
+
 
     return (
+
         <section className="listingsContainer">
-            <h3 className="listingType">FEATURED PROPERTIES</h3>
-            <div className="forSale listings">
-                <div id="prop1" className="propImage">
-                    <div className="propInfo">
-                        <p>Lorem House</p>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
+            {data != null
+                ?
+                <>
+                    <h3 className="listingType">FEATURED PROPERTIES</h3>
+                    <div className="forSale listings">
+                        <Prop1 prop1={prop1} data={data} />
+                        <div className="propImage"
+                            style={{
+                                backgroundImage: `url(${prop2}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover"
+                            }}
+                        >
+                            <div className="propInfo">
+                                <p>Lorem House</p>
+                                <p>Lorem ipsum dolor sit amet elit.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="prop2" className="propImage">
-                    <div className="propInfo">
-                        <p>Lorem House</p>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
+                    <div className="recentlySold listings">
+                        <div className="propImage"
+                            style={{
+                                backgroundImage: `url(${prop3}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover"
+                            }}
+                        >
+                            <div className="propInfo">
+                                <p>Lorem House</p>
+                                <p>Lorem ipsum dolor sit amet elit.</p>
+                            </div>
+                        </div>
+                        <div className="propImage"
+                            style={{
+                                backgroundImage: `url(${prop4}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover"
+                            }}
+                        >
+                            <div className="propInfo">
+                                <p>Lorem House</p>
+                                <p>Lorem ipsum dolor sit amet elit.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="recentlySold listings">
-                <div id="prop3" className="propImage">
-                    <div className="propInfo">
-                        <p>Lorem House</p>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
-                    </div>
-                </div>
-                <div id="prop4" className="propImage">
-                    <div className="propInfo">
-                        <p>Lorem House</p>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="angleDivBeigeContact"></div>
-            <div id="angleDivBlueContact"></div>
-        </section>
+                    <div id="angleDivBeigeContact"></div>
+                    <div id="angleDivBlueContact"></div>
+                </>
+                : ""
+            }
+        </section >
     )
 }

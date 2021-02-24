@@ -55,7 +55,7 @@ export default function Listings() {
                     <h3 className="listingType">FEATURED PROPERTIES</h3>
                     <div className="forSale listings">
                         <Prop1 prop1={prop1} data={data} />
-                        <div className="propImage"
+                        <div className="propImageContainer"
                             style={{
                                 backgroundImage: `url(${prop2}`,
                                 backgroundPosition: "center",
@@ -70,7 +70,7 @@ export default function Listings() {
                         </div>
                     </div>
                     <div className="recentlySold listings">
-                        <div className="propImage"
+                        <div className="propImageContainer"
                             style={{
                                 backgroundImage: `url(${prop3}`,
                                 backgroundPosition: "center",
@@ -83,7 +83,7 @@ export default function Listings() {
                                 <p>Lorem ipsum dolor sit amet elit.</p>
                             </div>
                         </div>
-                        <div className="propImage"
+                        <div className="propImageContainer"
                             style={{
                                 backgroundImage: `url(${prop4}`,
                                 backgroundPosition: "center",

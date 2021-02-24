@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Prop1({ data, changeImg }) {
 
@@ -19,37 +20,43 @@ export default function Prop1({ data, changeImg }) {
         <>
             {data &&
                 <div className="propImageContainer">
-                    <div className="propImageContainerTest"
-                        style={{
-                            backgroundImage: `url(${img3}`,
-                            backgroundPosition: "center",
-                            backrgoundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            opacity: opac === "img3" ? "1" : "0"
-                        }}
-                    ></div>
-                    <div className="propImageContainerTest"
-                        style={{
-                            backgroundImage: `url(${img2}`,
-                            backgroundPosition: "center",
-                            backrgoundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            opacity: opac === "img2" ? "1" : "0"
-                        }}
-                    ></div>
-                    <div className="propImageContainerTest"
-                        style={{
-                            backgroundImage: `url(${img1}`,
-                            backgroundPosition: "center",
-                            backrgoundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            opacity: opac === "img1" ? "1" : "0"
-                        }}
-                    ></div>
-                    <div className="propInfo">
-                        <p>Lorem House</p>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
-                    </div>
+                    <a href={data[0].url}>
+                        <div className="propImageContainerTest"
+                            style={{
+                                backgroundImage: `url(${img3}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                opacity: opac === "img3" ? "1" : "0"
+                            }}
+                        ></div>
+                        <div className="propImageContainerTest"
+                            style={{
+                                backgroundImage: `url(${img2}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                opacity: opac === "img2" ? "1" : "0"
+                            }}
+                        ></div>
+                        <div className="propImageContainerTest"
+                            style={{
+                                backgroundImage: `url(${img1}`,
+                                backgroundPosition: "center",
+                                backrgoundRepeat: "no-repeat",
+                                backgroundSize: "cover",
+                                opacity: opac === "img1" ? "1" : "0"
+                            }}
+                        ></div>
+                        <div className="propInfo">
+                            <p>{data[0].city}</p>
+                            <span>
+                                <div><i className="fas fa-bed"></i> <p>{`${data[0].rooms} Beds`}</p></div>
+                                <div><i className="fas fa-bath"></i><p>{`${data[0].baths} Baths`}</p></div>
+                                <div> <i className="fas fa-th-large"></i><p>{`${data[0].sqft} SqFt`}</p></div>
+                            </span>
+                        </div>
+                    </a>
                 </div>
             }
 

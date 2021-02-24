@@ -6,7 +6,7 @@
   height: 50rem;
   position: relative;
   overflow: hidden;
-  z-index: -10;
+  z-index: 0;
 }
 
 #angleDivBeige {
@@ -39,7 +39,7 @@
   position: absolute;
   bottom: 14%;
   left: 23%;
-  z-index: -10;
+  z-index: 0;
 }
 
 .infoContainer {
@@ -69,7 +69,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  z-index: -100;
+  z-index: 0;
 }
 
 #lorenzo {

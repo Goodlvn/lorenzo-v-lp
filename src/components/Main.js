@@ -2,6 +2,7 @@ import { CSSTransition } from "react-transition-group";
 
 export default function Main() {
     return (
+
         <main className="mainContainer">
             <div id="angleDivBeige">
                 <CSSTransition
@@ -13,6 +14,7 @@ export default function Main() {
                     <img id="logoHeader" className="fade-in" src="/images/lv-logo.png" alt="lorenzo-v logo" />
                 </CSSTransition>
             </div>
+
 
             <CSSTransition
                 in={true}
@@ -31,13 +33,10 @@ export default function Main() {
                                 <span className="firstBlue">P</span>
                                 <p >559.667.7612</p>
                             </div>
-                            <span>EMAIL</span>
-                            <span className="firstBlue">E</span>
-                            <p>lorenzovasquez@gmail.com</p>
 
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate eros enim, varius tempor lorem vehicula consequat. Mauris lacus ipsum.
-                    </p>
+                            </p>
                         </div>
                     </div>
                     <div className="lorenzoImage">
@@ -45,7 +44,6 @@ export default function Main() {
                     </div>
                 </div>
             </CSSTransition>
-
             <div id="angleDivWhite"></div>
         </main>
     )

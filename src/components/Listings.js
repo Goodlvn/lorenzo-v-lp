@@ -4,6 +4,7 @@ import Prop2 from "./SubComp/Prop2";
 import Prop3 from "./SubComp/Prop3";
 import Prop4 from "./SubComp/Prop4";
 
+
 export default function Listings() {
 
     const [data, setData] = useState(null);
@@ -14,10 +15,10 @@ export default function Listings() {
             setInterval(() => {
 
                 if (i === 0) {
-                    setState("img3");
+                    setState("img2");
                     i++;
                 } else if (i === 1) {
-                    setState("img2");
+                    setState("img3");
                     i++;
                 } else if (i === 2) {
                     setState("img1");

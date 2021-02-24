@@ -5,9 +5,9 @@ export default function Prop1({ data, changeImg }) {
     const [opac, setOpac] = useState("img1");
 
 
-    const img1 = data[0].imgs[0];
-    const img2 = data[0].imgs[1];
-    const img3 = data[0].imgs[2];
+    const img1 = data[3].imgs[0];
+    const img2 = data[3].imgs[1];
+    const img3 = data[3].imgs[2];
 
     useEffect(() => {
 

@@ -1,17 +1,34 @@
 import { useState, useEffect } from "react";
-import Prop1 from "./SubComp/Prop1"
+import Prop1 from "./SubComp/Prop1";
+import Prop2 from "./SubComp/Prop2";
+import Prop3 from "./SubComp/Prop3";
+import Prop4 from "./SubComp/Prop4";
 
 export default function Listings() {
 
     const [data, setData] = useState(null);
 
-    // const [prop1, setProp1] = useState(null);
+    function changeImg(setState, timeout) {
+        setTimeout(() => {
+            let i = 0;
+            setInterval(() => {
 
-    // data && setProp1(data[0].imgs[0]);
-    let prop1 = data && data[0].imgs[0];
-    let prop2 = data ? data[1].imgs[0] : "";
-    let prop3 = data ? data[2].imgs[0] : "";
-    let prop4 = data ? data[3].imgs[0] : "";
+                if (i === 0) {
+                    setState("img3");
+                    i++;
+                } else if (i === 1) {
+                    setState("img2");
+                    i++;
+                } else if (i === 2) {
+                    setState("img1");
+                    i = 0;
+                }
+
+            }, 10000)
+
+        }, timeout)
+    }
+
 
     const getData = () => {
         fetch("listings.json", {
@@ -54,48 +71,12 @@ export default function Listings() {
                 <>
                     <h3 className="listingType">FEATURED PROPERTIES</h3>
                     <div className="forSale listings">
-                        <Prop1 prop1={prop1} data={data} />
-                        <div className="propImageContainer"
-                            style={{
-                                backgroundImage: `url(${prop2}`,
-                                backgroundPosition: "center",
-                                backrgoundRepeat: "no-repeat",
-                                backgroundSize: "cover"
-                            }}
-                        >
-                            <div className="propInfo">
-                                <p>Lorem House</p>
-                                <p>Lorem ipsum dolor sit amet elit.</p>
-                            </div>
-                        </div>
+                        <Prop1 data={data} changeImg={changeImg} />
+                        <Prop2 data={data} changeImg={changeImg} />
                     </div>
                     <div className="recentlySold listings">
-                        <div className="propImageContainer"
-                            style={{
-                                backgroundImage: `url(${prop3}`,
-                                backgroundPosition: "center",
-                                backrgoundRepeat: "no-repeat",
-                                backgroundSize: "cover"
-                            }}
-                        >
-                            <div className="propInfo">
-                                <p>Lorem House</p>
-                                <p>Lorem ipsum dolor sit amet elit.</p>
-                            </div>
-                        </div>
-                        <div className="propImageContainer"
-                            style={{
-                                backgroundImage: `url(${prop4}`,
-                                backgroundPosition: "center",
-                                backrgoundRepeat: "no-repeat",
-                                backgroundSize: "cover"
-                            }}
-                        >
-                            <div className="propInfo">
-                                <p>Lorem House</p>
-                                <p>Lorem ipsum dolor sit amet elit.</p>
-                            </div>
-                        </div>
+                        <Prop3 data={data} changeImg={changeImg} />
+                        <Prop4 data={data} changeImg={changeImg} />
                     </div>
                     <div id="angleDivBeigeContact"></div>
                     <div id="angleDivBlueContact"></div>

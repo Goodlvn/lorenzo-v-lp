@@ -41,7 +41,13 @@
   flex-direction: column;
 }
 
+.contactForm > form {
+  width: 100%;
+  position: relative;
+}
+
 .contactForm input {
+  width: 100%;
   margin: 0.75rem 0;
   padding: 1rem;
   border: none;
@@ -49,23 +55,29 @@
   color: black;
 }
 
-.contactTypeBtns {
+.contactTypeBtns > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
-.typeContainer {
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
+.contactTypeBtns > ul > li {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  margin-top: 0.75rem;
 }
 
-input[type="radio"] {
+.contactTypeBtns > ul > li > p {
+  margin: 0;
+}
+.contactTypeBtns > ul > li > input {
   border: 0px;
   width: 20px;
   height: 2em;
@@ -109,12 +121,16 @@ input[type="radio"] {
 }
 
 .contactSubmitBtn {
+  position: absolute;
+  bottom: -0.5rem;
+  width: 100%;
+}
+
+.contactSubmitBtnInner {
   background-color: #7699b8;
-  color: white;
-  border: none;
-  padding: 1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .messageSent {

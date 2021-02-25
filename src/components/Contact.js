@@ -6,96 +6,78 @@ export default function Contact() {
 
     const [contactState, setContactState] = useState({
         status: "",
-        name: "",
-        phone: "",
-        email: "",
+        FNAME: "",
+        LNAME: "",
+        PHONE: "",
+        EMAIL: "",
     })
 
-    const [errorState, setErrorState] = useState({
-        invalidName: false,
-        invalidEmail: false,
-        invalidNumber: false
-    })
+    const [buttonState, setButtonState] = useState("button")
+
+    const [invalidFNAME, setFNAME] = useState(false);
+    const [invalidLNAME, setLNAME] = useState(false);
+    const [invalidEMAIL, setEMAIL] = useState(false);
+    const [invalidPHONE, setPHONE] = useState(false);
+
+    const regexNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+    const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
     const [formState, setFormState] = useState(true);
     const [messageState, setMessageState] = useState(false);
 
-    const { name, phone, email, status } = contactState;
-    const { invalidName, invalidEmail, invalidNumber } = errorState;
+    const { FNAME, LNAME, PHONE, EMAIL, status } = contactState;
 
-    // const handleChange = e => {
-    //     const { value, name } = e.target;
-    //     const regexNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-    //     const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    const handleChange = e => {
+        const { value, name } = e.target;
+        setContactState({ ...contactState, [name]: value });
 
-    //     setContactState({ ...contactState, [name]: value });
+        if (name === "FNAME") {
+            setFNAME(false)
+        }
 
-    //     if (name === "name") {
-    //         setErrorState({ ...errorState, invalidName: false });
-    //     }
+        if (name === "LNAME") {
+            setLNAME(false);
+        }
 
-    //     if (name === "phone" && regexNumber.test(value)) {
+        if (name === "PHONE" && regexNumber.test(value)) {
+            setPHONE(false);
+        }
 
-    //         setErrorState({ ...errorState, invalidNumber: false });
-    //     }
+        if (name === "EMAIL" && regexEmail.test(value)) {
+            setEMAIL(false);
+        }
 
-    //     if (name === "email" && regexEmail.test(value)) {
-    //         setErrorState({ ...errorState, invalidEmail: false });
-    //     }
-    // }
-
-    // const submitForm = (ev) => {
-    //     ev.preventDefault();
-    //     const form = ev.target;
-    //     const data = new FormData(form);
-    //     const xhr = new XMLHttpRequest();
+        subForm();
 
 
-    //     if (name === "" && phone === "" && email === "") {
+    }
 
-    //         setErrorState({ invalidName: true, invalidEmail: true, invalidNumber: true });
+    const subForm = () => {
 
-    //         return
 
-    //     } else if (name === "" && phone !== "" && email !== "") {
+        if (regexEmail.test(EMAIL) && regexNumber.test(PHONE) && LNAME !== "" && FNAME !== "") {
+            setButtonState("submit");
+            console.log("test")
+        }
+    }
 
-    //         setErrorState({ invalidName: true, invalidNumber: false, invalidEmail: false });
-    //         return
-    //     } else if (name === "" && phone === "" && email !== "") {
+    const checkForm = () => {
+        if (FNAME === "") {
+            setFNAME(true);
+        }
 
-    //         setErrorState({ invalidName: true, invalidNumber: true, invalidEmail: false });
-    //         return
-    //     } else if (name !== "" && phone === "" && email !== "") {
+        if (LNAME === "") {
+            setLNAME(true);
+        }
 
-    //         setErrorState({ invalidName: false, invalidNumber: true, invalidEmail: false });
-    //         return
-    //     } else if (name !== "" && phone === "" && email === "") {
+        if (EMAIL === "" || !regexEmail.test(EMAIL)) {
+            setEMAIL(true);
+        }
 
-    //         setErrorState({ invalidName: false, invalidNumber: true, invalidEmail: true });
-    //         return
-    //     } else if (name !== "" && phone !== "" && email === "") {
-
-    //         setErrorState({ invalidName: false, invalidNumber: false, invalidEmail: true });
-    //         return
-    //     } else if (name === "" && phone !== "" && email === "") {
-
-    //         setErrorState({ invalidName: true, invalidNumber: false, invalidEmail: true });
-    //         return
-    //     } else {
-    //         xhr.open(form.method, form.action);
-    //         xhr.setRequestHeader("Accept", "application/json");
-    //         xhr.onreadystatechange = () => {
-    //             if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    //             if (xhr.status === 200) {
-    //                 form.reset();
-    //                 setMessageState(true)
-    //             } else {
-    //                 setContactState({ status: "ERROR" });
-    //             }
-    //         };
-    //         xhr.send(data);
-    //     }
-    // }
+        if (PHONE === "" || !regexNumber.test(PHONE)) {
+            setPHONE(true);
+        }
+    }
 
     return (
         <section className="contactContainer">
@@ -106,11 +88,13 @@ export default function Contact() {
                 </div>
                 <FormHook
                     status={status}
-                    invalidName={invalidName}
-                    invalidEmail={invalidEmail}
-                    invalidNumber={invalidNumber}
-                // handleChange={handleChange}
-                // submitForm={submitForm}
+                    invalidFNAME={invalidFNAME}
+                    invalidLNAME={invalidLNAME}
+                    invalidEMAIL={invalidEMAIL}
+                    invalidPHONE={invalidPHONE}
+                    handleChange={handleChange}
+                    buttonState={buttonState}
+                    checkForm={checkForm}
                 />
             </div>}
             <CSSTransition

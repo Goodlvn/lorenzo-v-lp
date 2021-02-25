@@ -116,6 +116,24 @@
   top: -1rem;
 }
 
+.info {
+  display: flex;
+}
+
+.info > span {
+  font-weight: 700;
+  color: #7699b8;
+}
+
+.info > p {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.infoMobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1400px) {
   #lorenzo {
     width: 95rem;

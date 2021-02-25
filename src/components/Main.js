@@ -28,10 +28,16 @@ export default function Main() {
                             <h3>LORENZO VASQUEZ</h3>
                             <p>DRE#   212504941</p>
 
-                            <span>PHONE</span>
-                            <div>
-                                <span className="firstBlue">P</span>
-                                <p >559.667.7612</p>
+                            <div className="info">
+                                <span className="infoMobile">EMAIL</span>
+                                <span>E</span>
+                                <p>LorenzoVasquezL@gmail.com</p>
+                            </div>
+
+                            <div className="info">
+                                <span className="infoMobile">PHONE</span>
+                                <span>P</span>
+                                <p>559.667.7612</p>
                             </div>
 
                             <p>

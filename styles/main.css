@@ -15,7 +15,7 @@
   width: 100%;
   margin: 0 auto;
   -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 70%, 73% 100%, 0 70%);
-  clip-path: polygon(0% 0%, 100% 1%, 100% 70%, 29% 100%, 0 70%);
+  clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 29% 100%, 0 70%);
   position: absolute;
   top: -19rem;
   z-index: 1;
@@ -61,22 +61,22 @@
 
 .infoWrapper {
   width: 75%;
-  padding: 0 5%;
+  padding: 0 15%;
 }
 
 .lorenzoImage {
   overflow: hidden;
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 75%;
   z-index: 0;
 }
 
 #lorenzo {
-  width: 115rem;
+  width: 83rem;
   position: absolute;
-  top: 3rem;
-  left: -48rem;
+  top: 10rem;
+  left: -29rem;
 }
 
 .infoMain > .infoWrapper > h3 {

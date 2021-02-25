@@ -21,6 +21,7 @@
   flex-basis: 100%;
   width: 100%;
   margin: 0;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -35,8 +36,8 @@
   margin: 0;
 }
 .propImageContainer {
-  height: 15rem;
-  width: 27rem;
+  height: 20rem;
+  width: 33rem;
   margin: 3rem;
   position: relative;
   box-shadow: 0px 0px 10px rgba(18, 18, 27, 0.3);
@@ -59,7 +60,7 @@
   padding: 0.25rem 1rem;
   width: 75%;
   position: absolute;
-  bottom: 0;
+  bottom: 2.5rem;
   right: 0;
 }
 
@@ -120,14 +121,18 @@
   z-index: 0;
 }
 
-@media only screen and (min-width: 1325px) {
-  .propImage {
-    width: 30rem;
-    height: 15rem;
+@media only screen and (max-width: 1440px) {
+  .propImageContainer {
+    height: 14rem;
+    width: 27rem;
+  }
+
+  .propInfo {
+    bottom: 0;
   }
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1115px) {
   .listingsContainer {
     justify-content: space-evenly;
     padding-bottom: 20rem;
@@ -145,7 +150,7 @@
     padding-right: 2rem;
   }
 
-  .propImage {
+  .propImageContainer {
     margin: 3rem 0 0 0;
     width: 80%;
     height: 0;
@@ -155,16 +160,11 @@
   .propInfo {
     padding: 0.5rem;
     bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .propInfo {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 880px) {
   .listingsContainer {
     flex-direction: column;
   }
@@ -174,16 +174,82 @@
   }
 
   .recentlySold {
-    margin-top: 5rem;
     padding: 0;
   }
 
-  .propImage {
-    width: 70%;
+  .propImageContainer {
+    margin: 3rem 0 0 0;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .listings {
+    width: 100%;
+  }
+  .propImageContainer {
+    margin: 3rem 0 0 0;
+    width: 75%;
+    height: 0;
+    padding-bottom: 42%;
   }
 
-  .propInfo {
-    width: 60%;
-    margin-bottom: 2rem;
+  .propInfo > p:nth-child(1) {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .propInfo > span {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .listings {
+    width: 100%;
+  }
+  .propImageContainer {
+    margin: 3rem 0 0 0;
+    width: 75%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  .propInfo > p:nth-child(1) {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .propInfo > span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 675px) {
+  #angleDivBlueContact {
+    -webkit-clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);
+    clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);
+    bottom: -38rem;
+  }
+
+  #angleDivBeigeContact {
+    -webkit-clip-path: polygon(16% 19%, 100% 44%, 100% 100%, 0% 100%, 0 25%);
+    clip-path: polygon(16% 19%, 100% 44%, 100% 100%, 0% 100%, 0 25%);
+    bottom: -31rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #angleDivBlueContact {
+    -webkit-clip-path: polygon(34% 9%, 100% 20%, 100% 87%, 0 100%, 0 18%);
+    clip-path: polygon(34% 9%, 100% 20%, 100% 87%, 0 100%, 0 18%);
+  }
+
+  #angleDivBeigeContact {
+    -webkit-clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
+    clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
   }
 }

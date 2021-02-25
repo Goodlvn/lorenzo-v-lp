@@ -208,3 +208,17 @@
     left: -43rem;
   }
 }
+
+@media only screen and (max-width: 675px) {
+  #angleDivWhite {
+    -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 92%, 0 80%);
+    clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 92%, 0 80%);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #angleDivWhite {
+    -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 90%, 0 80%);
+    clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 90%, 0 80%);
+  }
+}

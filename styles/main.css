@@ -198,6 +198,10 @@
     min-width: 50%;
     justify-content: center;
   }
+
+  .infoWrapper {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -208,39 +212,7 @@
   }
 }
 
-@media only screen and (max-width: 725px) {
-  .infoDesktop {
-    display: none;
-  }
-
-  .infoMobile {
-    display: block;
-  }
-
-  .info {
-    flex-direction: column;
-  }
-
-  .info > p {
-    margin: 0;
-  }
-
-  .emailInfo {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media only screen and (max-width: 745px) {
-}
-
-@media only screen and (max-width: 675px) {
-  #angleDivWhite {
-    -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 92%, 0 80%);
-    clip-path: polygon(0% 0%, 100% 1%, 100% 80%, 25% 92%, 0 80%);
-  }
-}
-
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 700px) {
   .mainContainer {
     height: 51rem;
   }
@@ -267,9 +239,9 @@
   }
 
   #lorenzo {
-    width: 53rem;
+    width: 64rem;
     top: 11rem;
-    left: -24rem;
+    left: -20rem;
   }
 
   .infoMain {
@@ -312,6 +284,14 @@
     align-items: center;
     text-align: center;
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #lorenzo {
+    width: 53rem;
+    top: 11rem;
+    left: -24rem;
   }
 }
 

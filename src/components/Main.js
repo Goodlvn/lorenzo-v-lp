@@ -29,13 +29,11 @@ export default function Main() {
                             <p>DRE#   212504941</p>
 
                             <div className="info emailInfo">
-                                <span className="infoMobile">EMAIL</span>
                                 <span className="infoDesktop">E</span>
                                 <p>LorenzoVasquezL@gmail.com</p>
                             </div>
 
                             <div className="info phoneInfo">
-                                <span className="infoMobile">PHONE</span>
                                 <span className="infoDesktop">P</span>
                                 <p>559.667.7612</p>
                             </div>

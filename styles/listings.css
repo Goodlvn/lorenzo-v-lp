@@ -185,6 +185,13 @@
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .listingType {
+    padding: 0 2rem;
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 880px) {
   .listings {
     width: 100%;
@@ -211,6 +218,7 @@
   .listings {
     width: 100%;
   }
+
   .propImageContainer {
     margin: 3rem 0 0 0;
     width: 88%;
@@ -255,10 +263,5 @@
   #angleDivBeigeContact {
     -webkit-clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
     clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
-  }
-
-  .listingsContainer > h3 {
-    padding: 0 2rem;
-    margin: 0;
   }
 }

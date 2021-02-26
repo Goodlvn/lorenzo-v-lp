@@ -213,7 +213,7 @@
   }
   .propImageContainer {
     margin: 3rem 0 0 0;
-    width: 75%;
+    width: 88%;
     height: 0;
     padding-bottom: 55%;
   }
@@ -228,7 +228,11 @@
     display: none;
   }
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 745px) {
+  .listingsContainer {
+    padding-bottom: 13rem;
+  }
+
   #angleDivBlueContact {
     -webkit-clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);
     clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);
@@ -251,5 +255,10 @@
   #angleDivBeigeContact {
     -webkit-clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
     clip-path: polygon(17% 23%, 101% 44%, 104% 100%, 0% 100%, 0 27%);
+  }
+
+  .listingsContainer > h3 {
+    padding: 0 2rem;
+    margin: 0;
   }
 }

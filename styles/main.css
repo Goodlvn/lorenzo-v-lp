@@ -134,30 +134,33 @@
   display: none;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1645px) {
   #lorenzo {
-    width: 95rem;
-    top: 6rem;
-    left: -41rem;
+    left: -38rem;
   }
 }
 
 @media only screen and (max-width: 1400px) {
   #lorenzo {
-    left: -45rem;
+    left: -41rem;
   }
 }
+
+/* @media only screen and (max-width: 1400px) {
+  #lorenzo {
+    left: -45rem;
+  }
+} */
 
 @media only screen and (max-width: 1060px) {
   #logoHeader {
     left: 20%;
   }
 
-  #lorenzo {
-    width: 88rem;
-    top: 6rem;
-    left: -40rem;
+  .lorenzoImage {
+    width: 90%;
   }
+
   .infoContainer {
     padding: 0;
   }
@@ -197,11 +200,7 @@
   }
 }
 
-@media only screen and (max-width: 725px) {
-  .infoMain {
-    min-width: 60%;
-  }
-
+@media only screen and (max-width: 800px) {
   #lorenzo {
     width: 80rem;
     top: 7rem;

@@ -93,11 +93,6 @@
   margin-bottom: 1rem;
 }
 
-.firstBlue::first-letter {
-  font-weight: 800;
-  color: #7699b8;
-}
-
 .infoWrapper > p:nth-child(4) {
   margin-bottom: 1rem;
 }
@@ -130,10 +125,6 @@
   margin-left: 0.5rem;
 }
 
-.infoMobile {
-  display: none;
-}
-
 @media only screen and (max-width: 1645px) {
   #lorenzo {
     left: -38rem;
@@ -145,12 +136,6 @@
     left: -41rem;
   }
 }
-
-/* @media only screen and (max-width: 1400px) {
-  #lorenzo {
-    left: -45rem;
-  }
-} */
 
 @media only screen and (max-width: 1060px) {
   #logoHeader {
@@ -239,9 +224,9 @@
   }
 
   #lorenzo {
-    width: 64rem;
-    top: 11rem;
-    left: -20rem;
+    width: 145%;
+    top: 20%;
+    left: -44%;
   }
 
   .infoMain {
@@ -250,7 +235,6 @@
     height: 11rem;
     margin: 0;
     padding: 1rem;
-    /* clip-path: circle(50% at 50% 50%); */
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -259,24 +243,6 @@
   .infoBody {
     display: none;
   }
-
-  .infoDesktop {
-    display: block;
-  }
-
-  .infoMobile {
-    display: none;
-  }
-
-  .info > p {
-    margin: 0;
-    margin-left: 0.5rem;
-  }
-
-  .info {
-    flex-direction: row;
-  }
-
   .infoWrapper {
     display: flex;
     flex-direction: column;
@@ -284,6 +250,22 @@
     align-items: center;
     text-align: center;
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  #lorenzo {
+    width: 169%;
+    top: 20%;
+    left: -68%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #lorenzo {
+    width: 189%;
+    top: 20%;
+    left: -86%;
   }
 }
 

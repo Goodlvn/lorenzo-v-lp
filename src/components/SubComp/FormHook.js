@@ -3,7 +3,7 @@ export default function FormHook({ invalidFNAME, invalidLNAME, invalidEMAIL, inv
 
     return (
         <div id="mc_embed_signup" className="contactForm">
-            <form action="https://world.us1.list-manage.com/subscribe/post?u=b931a098fad1826a4bfa44074&amp;id=886f33c92d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate autoComplete="chrome-off">
+            <form action="https://world.us1.list-manage.com/subscribe/post?u=b931a098fad1826a4bfa44074&amp;id=886f33c92d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
                     <div className="mc-field-group">
                         <input type="text" name="FNAME" className={invalidFNAME ? "error" : ""} id="mce-FNAME" placeholder="FIRST NAME" onChange={handleChange} />

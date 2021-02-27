@@ -60,10 +60,6 @@ export default function Listings() {
 
     }, [])
 
-    data && console.log(data);
-
-
-
     return (
 
         <section className="listingsContainer">

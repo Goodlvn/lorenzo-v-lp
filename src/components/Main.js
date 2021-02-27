@@ -38,7 +38,7 @@ export default function Main() {
                                 <p>559.667.7612</p>
                             </div>
 
-                            <p class="infoBody">
+                            <p className="infoBody">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate eros enim, varius tempor lorem vehicula consequat. Mauris lacus ipsum.
                             </p>
                         </div>

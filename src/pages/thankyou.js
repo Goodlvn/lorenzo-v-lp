@@ -17,7 +17,6 @@ export default function ThankYou() {
                 <button className="tyBtn" onClick={() => router.push("/")}>BACK</button>
                 <button className="tyBtn" onClick={() => (window.location.href = modernBroker)}>MORE PROPERTIES</button>
             </div>
-
         </section >
     )
 }

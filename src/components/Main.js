@@ -30,8 +30,6 @@ export default function Main() {
                             <h3>LORENZO VASQUEZ</h3>
                             <p>DRE#   212504941</p>
 
-                            <button className="tyBtn" onClick={() => router.push("/thankyou")}>TEST</button>
-
                             <div className="info emailInfo">
                                 <span className="infoDesktop">E</span>
                                 <p>LorenzoVasquezL@gmail.com</p>

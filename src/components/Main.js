@@ -1,6 +1,8 @@
 import { CSSTransition } from "react-transition-group";
+import { useRouter } from "next/router"
 
 export default function Main() {
+    const router = useRouter();
     return (
 
         <main className="mainContainer">
@@ -27,6 +29,8 @@ export default function Main() {
                         <div className="infoWrapper">
                             <h3>LORENZO VASQUEZ</h3>
                             <p>DRE#   212504941</p>
+
+                            <button className="tyBtn" onClick={() => router.push("/thankyou")}>TEST</button>
 
                             <div className="info emailInfo">
                                 <span className="infoDesktop">E</span>

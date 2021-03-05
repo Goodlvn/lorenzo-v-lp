@@ -1,7 +1,21 @@
 import { useState, useEffect } from "react";
+import Review from "../components/SubComp/Review";
 
 
 export default function Testimonials() {
+
+    const [data, setData] = useState(null);
+
+    function changeReview(setState) {
+        let i = 1;
+        setInterval(() => {
+            setState(data[i]);
+            i++;
+            if (i === 3) {
+                i = 0;
+            }
+        }, 3000)
+    }
 
     const getData = () => {
         fetch("testimonials.json", {
@@ -12,7 +26,7 @@ export default function Testimonials() {
         }).then(res => {
             return res.json();
         }).then(({ testimonials }) => {
-            console.log(testimonials);
+            setData(testimonials);
         })
     }
 
@@ -20,25 +34,9 @@ export default function Testimonials() {
         getData();
     }, [])
 
-
-
-
     return (
         <section className="testMainContainer">
-            <div className="testContainer">
-                <div className="quoteBox">
-                    <img src="./images/quotation-mark.svg" alt="quotation" />
-                </div>
-                <p>"Lorenzo Vasquez handled the sale of our mother's home. Everything went very smoothly and in a timely manner. Lorenzo was always in contact and keeping us updated on everything during the process.  I highly recommend his services."</p>
-                <div className="stars">
-                    <img src="./images/star.svg" alt="star rating" />
-                    <img src="./images/star.svg" alt="star rating" />
-                    <img src="./images/star.svg" alt="star rating" />
-                    <img src="./images/star.svg" alt="star rating" />
-                    <img src="./images/star.svg" alt="star rating" />
-                </div>
-                <h4>Corey Wilder</h4>
-            </div>
+            {data && <Review data={data} changeReview={changeReview} />}
 
             <div id="angleDivBeigeContact"></div>
             <div id="angleDivBlueContact"></div>

@@ -47,7 +47,7 @@
   position: relative;
 }
 
-.quoteBox > img {
+.quoteBox > a > img {
   width: 4rem;
 }
 

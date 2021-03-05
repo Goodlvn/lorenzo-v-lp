@@ -1,0 +1,9 @@
+.tContainer {
+  background-color: #09264a;
+  min-height: 20rem;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

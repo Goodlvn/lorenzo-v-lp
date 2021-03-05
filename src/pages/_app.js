@@ -4,6 +4,7 @@ import "../../styles/listings.css"
 import "../../styles/contact.css"
 import "../../styles/footer.css"
 import "../../styles/thankyou.css"
+import "../../styles/test.css"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

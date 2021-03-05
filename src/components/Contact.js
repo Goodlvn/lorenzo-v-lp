@@ -63,7 +63,6 @@ export default function Contact() {
         }
     }
 
-    console.log(contactState);
     return (
         <section className="contactContainer">
             <div className="contactWrapper">

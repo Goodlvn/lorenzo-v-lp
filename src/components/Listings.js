@@ -73,8 +73,6 @@ export default function Listings() {
                         <Prop3 data={data} changeImg={changeImg} />
                         <Prop4 data={data} changeImg={changeImg} />
                     </div>
-                    <div id="angleDivBeigeContact"></div>
-                    <div id="angleDivBlueContact"></div>
                 </>
                 : ""
             }

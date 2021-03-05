@@ -10,8 +10,8 @@ export default function Index() {
     <div className="originContainer">
       <Main />
       <Listings />
-      <Contact />
       <Testimonials />
+      <Contact />
       <Footer />
     </div>
   )

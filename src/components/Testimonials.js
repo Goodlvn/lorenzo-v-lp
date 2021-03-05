@@ -11,12 +11,14 @@ export default function Testimonials() {
             }
         }).then(res => {
             return res.json();
-        }).then(data => {
-            console.log(data);
+        }).then(({ testimonials }) => {
+            console.log(testimonials);
         })
     }
 
-
+    useEffect(() => {
+        getData();
+    }, [])
 
 
 

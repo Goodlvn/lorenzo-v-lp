@@ -56,8 +56,6 @@ export default function Listings() {
 
     useEffect(() => {
         getData();
-
-
     }, [])
 
     return (

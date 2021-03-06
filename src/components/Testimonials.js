@@ -17,7 +17,7 @@ export default function Testimonials() {
             if (i === 3) {
                 i = 0;
             }
-        }, 8000)
+        }, 10000)
     }
 
     useEffect(() => {

@@ -91,3 +91,63 @@
 .transitionReview {
   position: absolute;
 }
+
+@media only screen and (max-width: 1300px) {
+  .testMainContainer {
+    min-height: 40rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .testMainContainer {
+    min-height: 50rem;
+  }
+
+  .testContainer {
+    font-size: 1.5rem;
+  }
+
+  .testContainer::before {
+    width: 150%;
+  }
+
+  .transitionContainer {
+    width: 125%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .testMainContainer {
+    min-height: 55rem;
+  }
+
+  .testContainer {
+    font-size: 1.5rem;
+  }
+
+  .testContainer::before {
+    width: 170%;
+  }
+
+  .transitionContainer {
+    width: 175%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .testMainContainer {
+    min-height: 60rem;
+  }
+
+  .testContainer {
+    font-size: 1.5rem;
+  }
+
+  .testContainer::before {
+    width: 170%;
+  }
+
+  .transitionContainer {
+    width: 175%;
+  }
+}

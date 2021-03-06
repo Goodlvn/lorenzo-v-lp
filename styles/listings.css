@@ -134,6 +134,7 @@
 @media only screen and (max-width: 1115px) {
   .listingsContainer {
     justify-content: space-evenly;
+    margin-bottom: 3rem;
   }
 
   .listings {
@@ -235,10 +236,6 @@
   }
 }
 @media only screen and (max-width: 745px) {
-  .listingsContainer {
-    padding-bottom: 13rem;
-  }
-
   #angleDivBlueContact {
     -webkit-clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);
     clip-path: polygon(34% 5%, 100% 20%, 100% 90%, 0 100%, 0 18%);

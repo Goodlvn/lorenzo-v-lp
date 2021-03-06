@@ -17,7 +17,7 @@ export default function Testimonials() {
             if (i === 3) {
                 i = 0;
             }
-        }, 3000)
+        }, 8000)
     }
 
     useEffect(() => {
@@ -26,7 +26,23 @@ export default function Testimonials() {
 
     return (
         <section className="testMainContainer">
-            <Review review={review} />
+            <div className="testContainer">
+                <div className="quoteBox">
+                    <a href={review.url} target="_blank">
+                        <img src="./images/quotation-mark.svg" alt="quotation" />
+                    </a>
+                </div>
+                <TransitionGroup className="transitionContainer">
+                    <CSSTransition
+                        key={review.id}
+                        timeout={400}
+                        classNames="review"
+                    >
+                        <Review review={review} />
+                    </CSSTransition>
+                </TransitionGroup>
+            </div>
+
             <div id="angleDivBeigeContact"></div>
             <div id="angleDivBlueContact"></div>
         </section>

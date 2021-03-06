@@ -4,7 +4,7 @@
   color: #09264a;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   position: relative;
   padding-bottom: 16rem;
 }
@@ -30,11 +30,11 @@
   letter-spacing: 1px;
 }
 
-.testContainer > h4 {
+.transitionReview > h4 {
   margin: 0;
 }
 
-.testContainer > p {
+.transitionReview > p {
   margin: 1rem 0 2rem 0;
 }
 
@@ -61,14 +61,15 @@
 }
 
 .review-enter {
-  opacity: 0.01;
+  opacity: 0;
+  z-index: 1;
   transform: translate(0, -10px);
 }
 
-.review-enter-active {
+.review-enter.review-enter-active {
   opacity: 1;
   transform: translate(0, 0);
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in 200ms;
 }
 
 .review-exit {
@@ -76,8 +77,17 @@
   transform: translate(0, 0);
 }
 
-.review-exit-active {
-  opacity: 0.01;
+.review-exit.review-exit-active {
+  opacity: 0;
   transform: translate(0, 10px);
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.transitionContainer {
+  position: relative;
+  width: 100%;
+}
+
+.transitionReview {
+  position: absolute;
 }

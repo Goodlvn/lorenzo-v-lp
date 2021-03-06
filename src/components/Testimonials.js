@@ -1,43 +1,32 @@
 import { useState, useEffect } from "react";
-import Review from "../components/SubComp/Review";
+import Review from "./SubComp/Review";
+import { TransitionGroup, CSSTransition, Transition } from "react-transition-group";
+import { data } from "../data/Reviews";
 
 
 export default function Testimonials() {
 
-    const [data, setData] = useState(null);
+    const [review, setReview] = useState(data[0]);
 
-    function changeReview(setState) {
+    function changeReview() {
         let i = 1;
         setInterval(() => {
-            setState(data[i]);
+            setReview(data[i]);
             i++;
+            console.log(i);
             if (i === 3) {
                 i = 0;
             }
         }, 3000)
     }
 
-    const getData = () => {
-        fetch("testimonials.json", {
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            }
-        }).then(res => {
-            return res.json();
-        }).then(({ testimonials }) => {
-            setData(testimonials);
-        })
-    }
-
     useEffect(() => {
-        getData();
+        changeReview();
     }, [])
 
     return (
         <section className="testMainContainer">
-            {data && <Review data={data} changeReview={changeReview} />}
-
+            <Review review={review} />
             <div id="angleDivBeigeContact"></div>
             <div id="angleDivBlueContact"></div>
         </section>

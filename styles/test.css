@@ -59,3 +59,25 @@
   position: absolute;
   top: 3rem;
 }
+
+.review-enter {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+}
+
+.review-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 300ms ease-in;
+}
+
+.review-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.review-exit-active {
+  opacity: 0.01;
+  transform: translate(0, 10px);
+  transition: all 300ms ease-in;
+}

@@ -35,7 +35,7 @@
 }
 
 .transitionReview > p {
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .quoteBox {
@@ -89,7 +89,7 @@
 }
 
 .transitionReview {
-  position: absolute;
+  margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -101,6 +101,7 @@
 @media only screen and (max-width: 700px) {
   .testMainContainer {
     min-height: 50rem;
+    padding-bottom: 10rem;
   }
 
   .testContainer {
@@ -113,6 +114,10 @@
 
   .transitionContainer {
     width: 125%;
+  }
+
+  .transitionReview {
+    width: 150%;
   }
 }
 
